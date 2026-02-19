@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { JSDOM } from 'jsdom';
+
+const dom = new JSDOM(`<!DOCTYPE html><div id="root"></div>`);
+const document = dom.window.document;
+
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
