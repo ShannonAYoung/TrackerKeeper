@@ -1,0 +1,7 @@
+{
+  "name": "Tracker Keeper",
+  "description": "A cross-platform safety application connecting smartphones and smartwatches to monitor distance and location with a royal blue aesthetic.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
