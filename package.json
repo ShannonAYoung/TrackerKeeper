@@ -2,19 +2,14 @@
   "name": "tracker-keeper",
   "version": "1.0.0",
   "description": "Smart watch and phone range tracker",
-  "main": index.tsx",
+  "main": "App.tsx",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "windows": "react-native run-windows",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios"
+  "dev": "vite",
+  "build": "vite build", 
+  "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-scripts": "5.0.1",
     "react-dom": "^18.2.0",
     "lucide-react": "^0.263.1",
     "clsx": "^2.0.0",
