@@ -4,9 +4,9 @@
   "description": "Smart watch and phone range tracker",
   "main": "index.tsx",
   "scripts": {
-   "build": "npx vite build",
-  "dev": "vite",
-  "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "react": "^18.2.0",
