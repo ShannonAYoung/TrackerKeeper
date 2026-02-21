@@ -4,8 +4,8 @@
   "description": "Smart watch and phone range tracker",
   "main": "index.tsx",
   "scripts": {
+   "build": "npx vite build"
   "dev": "vite",
-  "build": "vite build", 
   "preview": "vite preview"
   },
   "dependencies": {
@@ -16,11 +16,9 @@
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react": "^5.1.3",
-    "vite": "^7.3.1",
-    "typescript": "^4.9.5"
+  "start": "npm run build && serve dist",
+  "build": "npm install --production=false && vite build",
+  "dev": "vite dev"
   },
   "browserslist": {
     "production": [
