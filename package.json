@@ -2,7 +2,7 @@
   "name": "tracker-keeper",
   "version": "1.0.0",
   "description": "Smart watch and phone range tracker",
-  "main": "App.tsx",
+  "main": index.tsx",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
