@@ -2,11 +2,15 @@
   "name": "tracker-keeper",
   "version": "1.0.0",
   "description": "Smart watch and phone range tracker",
-  "main": "index.tsx",
+  "main": "App.tsx",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "windows": "react-native run-windows",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -16,9 +20,12 @@
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
-  "start": "npm run build && serve dist",
-  "build": "npm install --production=false && vite build",
-  "dev": "vite dev"
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^5.1.3",
+    "react-scripts": "5.0.1",
+    "vite": "^7.3.1",
+    "typescript": "^4.9.5"
   },
   "browserslist": {
     "production": [
