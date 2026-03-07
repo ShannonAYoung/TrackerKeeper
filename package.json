@@ -20,7 +20,7 @@
     "lucide-react": "^0.263.1",
     "clsx": "^2.0.0",
     "tailwind-merge": "^1.14.0",
-    "@react-native/metro-config": "^0.74.0"
+    "@react-native/metro-config": "^0.76.0"
   },
   "devDependencies": {
     "@babel/core": "^7.23.0",
