@@ -5,7 +5,6 @@ const defaultConfig = getDefaultConfig(__dirname);
 /** @type {import('metro-config').MetroConfig} */
 const customConfig = {
   resolver: {
-    // Ensure TypeScript extensions are included
     sourceExts: [
       ...defaultConfig.resolver.sourceExts,
       'ts',
@@ -13,10 +12,8 @@ const customConfig = {
     ]
   },
   transformer: {
-    // If you later add SVG support, uncomment this:
-    // babelTransformerPath: require.resolve('react-native-svg-transformer'),
+    // Add custom transformers here if needed
   }
 };
 
 module.exports = mergeConfig(defaultConfig, customConfig);
-
