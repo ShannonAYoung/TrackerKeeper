@@ -1,6 +1,7 @@
 const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
 
 /** @type {import('metro-config').MetroConfig} */
+
 const config = {
   resolver: {
     // Add '.ts' and '.tsx' to the list of source extensions
