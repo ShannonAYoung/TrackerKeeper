@@ -1,19 +1,17 @@
 const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
 
-const defaultConfig = getDefaultConfig(__dirname);
-
 /** @type {import('metro-config').MetroConfig} */
-const customConfig = {
+const config = {
   resolver: {
-    sourceExts: [
-      ...defaultConfig.resolver.sourceExts,
-      'ts',
-      'tsx'
-    ]
+    // Add '.ts' and '.tsx' to the list of source extensions
+    sourceExts: [...getDefaultConfig(__dirname).resolver.sourceExts, 'ts', 'tsx'],
   },
+  // Metro transforms all code with Babel, which handles the TypeScript compilation
+  // based on your babel.config.js and tsconfig.json files
   transformer: {
-    // Add custom transformers here if needed
-  }
+    // You may need to add custom transformers here for specific assets like SVG
+    // babelTransformerPath: require.resolve('react-native-svg-transformer'),
+  },
 };
 
-module.exports = mergeConfig(defaultConfig, customConfig);
+module.exports = mergeConfig(getDefaultConfig(__dirname), config);
