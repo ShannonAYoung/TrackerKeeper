@@ -179,5 +179,3 @@ export default MapDisplay: React.FC<MapDisplayProps> = ({ phoneLocation, watchLo
     </div>
   );
 };
-
-export default MapDisplay;
