@@ -7,7 +7,7 @@ interface AlertModalProps {
   platform: string;
 }
 
-export default AlertModal: React.FC<AlertModalProps> = ({ isOpen, onClose, platform }) => {
+const AlertModal: React.FC<AlertModalProps> = ({ isOpen, onClose, platform }) => {
   if (!isOpen) return null;
 
   return (
@@ -43,3 +43,4 @@ export default AlertModal: React.FC<AlertModalProps> = ({ isOpen, onClose, platf
   );
 };
 
+export default AlertModal;

@@ -7,7 +7,7 @@ interface SettingsPanelProps {
   onSave: (newSettings: DeviceSettings) => void;
 }
 
-export default SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onSave }) => {
+const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onSave }) => {
   const [localSettings, setLocalSettings] = React.useState<DeviceSettings>(settings);
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -89,3 +89,5 @@ export default SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onSave
     </div>
   );
 };
+
+export default SettingsPanel;

@@ -12,7 +12,7 @@ interface PairingModalProps {
 const IOS_DEVICES = ["iPhone 15 Pro", "iPhone 14 Plus", "iPhone SE (3rd Gen)", "iPhone 13 mini"];
 const ANDROID_DEVICES = ["Samsung Galaxy S24", "Google Pixel 8 Pro", "OnePlus 11", "Nothing Phone (2)"];
 
-export default PairingModal: React.FC<PairingModalProps> = ({ isOpen, onClose, onPair, detectedPlatform }) => {
+const PairingModal: React.FC<PairingModalProps> = ({ isOpen, onClose, onPair, detectedPlatform }) => {
   const [step, setStep] = useState<1 | 2>(1);
   const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(null);
   const [isScanning, setIsScanning] = useState(false);
@@ -153,3 +153,5 @@ export default PairingModal: React.FC<PairingModalProps> = ({ isOpen, onClose, o
     </div>
   );
 };
+
+export default PairingModal;
