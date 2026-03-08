@@ -14,10 +14,6 @@ import { useSettings } from "./hooks/useSettings";
 import { getProtocolInstructions } from "./utils/protocol";
 
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App/>);
-
 export default function App() {
   const { deviceState, setDeviceState, handleDisconnect, manualRefresh, testDrift } = useDeviceState();
   const { settings, setSettings } = useSettings();
@@ -266,3 +262,6 @@ export default function App() {
   );
 }
 
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App/>);
