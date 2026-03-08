@@ -15,6 +15,8 @@ import { AlertModal } from './components/AlertModal';
 import { MapDisplay } from './components/MapDisplay';
 import { SettingsPanel } from './components/SettingsPanel';
 import { PairingModal } from './components/PairingModal';
+import './global.css';
+
 
 const App: React.FC = () => {
   // --- State Management ---
