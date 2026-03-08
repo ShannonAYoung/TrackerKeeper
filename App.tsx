@@ -14,7 +14,8 @@ import { useSettings } from "./hooks/useSettings";
 import { getProtocolInstructions } from "./utils/protocol";
 
 
-const function App() {
+const App = () => {
+
   const { deviceState, setDeviceState, handleDisconnect, manualRefresh, testDrift } = useDeviceState();
   const { settings, setSettings } = useSettings();
 
