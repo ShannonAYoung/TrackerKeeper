@@ -7,10 +7,16 @@ export default defineConfig(({ mode }) => {
 
   return {
     server: {
-      host: 'trackerkeeperapp.onrender.com',
+      port: 3000,
+      host: '0.0.0.0',
 
-      // FIX: Allow all hosts so Vite never blocks your requests
-      allowedHosts: true
+      // Add allowed hosts here
+      allowedHosts: [
+        'localhost',
+        '127.0.0.1',
+        '::1',
+        'trackerkeeperapp.onrender.com' // your placeholder domain
+      ]
     },
 
     plugins: [react()],
