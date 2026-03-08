@@ -15,7 +15,7 @@ declare global {
   }
 }
 
-export const MapDisplay: React.FC<MapDisplayProps> = ({ phoneLocation, watchLocation, apiKey, maxRange }) => {
+export default MapDisplay: React.FC<MapDisplayProps> = ({ phoneLocation, watchLocation, apiKey, maxRange }) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const [mapInstance, setMapInstance] = useState<any>(null);
   const [markers, setMarkers] = useState<{phone?: any, watch?: any, circle?: any}>({});
