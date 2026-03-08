@@ -349,4 +349,7 @@ const App: React.FC = () => {
   );
 };
 
+
+const root = ReactDOM.createRoot(document.getElementById('rppt'));
+root.render(<App/>);
 export default App;
