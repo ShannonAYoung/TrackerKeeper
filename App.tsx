@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "/global.css";
+import "/index.css";
 
 import PairingModal from "./components/PairingModal";
 import AlertModal from "./components/AlertModal";
