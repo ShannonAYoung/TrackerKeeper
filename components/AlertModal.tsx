@@ -42,3 +42,5 @@ export const AlertModal: React.FC<AlertModalProps> = ({ isOpen, onClose, platfor
     </div>
   );
 };
+
+export default AlertModal;

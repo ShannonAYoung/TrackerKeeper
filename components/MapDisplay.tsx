@@ -179,3 +179,5 @@ export const MapDisplay: React.FC<MapDisplayProps> = ({ phoneLocation, watchLoca
     </div>
   );
 };
+
+export default MapDisplay;
