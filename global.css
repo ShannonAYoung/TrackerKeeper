@@ -1,7 +1,6 @@
 /* -------------------------------------------------------
-   GLOBAL RESET
+   BASE RESET + GLOBALS
 ------------------------------------------------------- */
-
 * {
   margin: 0;
   padding: 0;
@@ -13,132 +12,186 @@ html, body, #root {
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: #ffffff;
+  background-color: #4169E1;
   color: #111;
 }
 
 /* -------------------------------------------------------
-   FLEXBOX HELPERS (React Native style)
+   LAYOUT UTILITIES
 ------------------------------------------------------- */
-
-.flex {
-  display: flex;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.flex-1 {
-  flex: 1;
-}
-
-/* -------------------------------------------------------
-   SPACING UTILITIES
-------------------------------------------------------- */
-
+.min-h-screen { min-height: 100vh; }
+.max-w-xl { max-width: 36rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.p-6 { padding: 1.5rem; }
 .p-4 { padding: 1rem; }
+.p-3 { padding: 0.75rem; }
 .p-2 { padding: 0.5rem; }
-
-.m-4 { margin: 1rem; }
-.m-2 { margin: 0.5rem; }
-
-.mt-4 { margin-top: 1rem; }
-.mb-4 { margin-bottom: 1rem; }
-
-/* -------------------------------------------------------
-   BUTTONS (RN-style)
-------------------------------------------------------- */
-
-.button {
-  background-color: #007aff;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: center;
-  transition: background-color 0.2s ease;
-}
-
-.button:hover {
-  background-color: #0063d6;
-}
-
-.button:active {
-  background-color: #004ea8;
-}
+.pb-10 { padding-bottom: 2.5rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
 
 /* -------------------------------------------------------
-   INPUTS (RN-style)
+   FLEXBOX
 ------------------------------------------------------- */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
 
-.input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  margin-bottom: 12px;
+/* -------------------------------------------------------
+   GRID
+------------------------------------------------------- */
+.grid { display: grid; }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.gap-4 { gap: 1rem; }
+
+/* -------------------------------------------------------
+   TYPOGRAPHY
+------------------------------------------------------- */
+.text-center { text-align: center; }
+.text-white { color: white; }
+.text-gray-900 { color: #111827; }
+.text-gray-800 { color: #1f2937; }
+.text-gray-700 { color: #374151; }
+.text-gray-600 { color: #4b5563; }
+.text-gray-500 { color: #6b7280; }
+.text-gray-400 { color: #9ca3af; }
+.text-blue-100 { color: #dbeafe; }
+.text-blue-200 { color: #bfdbfe; }
+.text-blue-600 { color: #2563eb; }
+.text-red-500 { color: #ef4444; }
+.text-red-600 { color: #dc2626; }
+.text-green-700 { color: #15803d; }
+.text-green-800 { color: #166534; }
+
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-lg { font-size: 1.125rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-medium { font-weight: 500; }
+.uppercase { text-transform: uppercase; }
+.tracking-wide { letter-spacing: 0.05em; }
+
+/* -------------------------------------------------------
+   BACKGROUNDS
+------------------------------------------------------- */
+.bg-white { background-color: white; }
+.bg-gray-50 { background-color: #f9fafb; }
+.bg-gray-100 { background-color: #f3f4f6; }
+.bg-gray-200 { background-color: #e5e7eb; }
+.bg-green-50 { background-color: #ecfdf5; }
+.bg-green-100 { background-color: #d1fae5; }
+.bg-blue-100 { background-color: #dbeafe; }
+.bg-blue-900 { background-color: #1e3a8a; }
+.bg-white\/10 { background-color: rgba(255,255,255,0.1); }
+.bg-white\/20 { background-color: rgba(255,255,255,0.2); }
+
+.bg-\[\#4169E1\] { background-color: #4169E1; }
+
+/* Gradient */
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
 }
+.from-gray-50 { --tw-gradient-from: #f9fafb; }
+.to-gray-100 { --tw-gradient-to: #f3f4f6; }
 
-.input:focus {
-  outline: none;
-  border-color: #007aff;
-  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+/* -------------------------------------------------------
+   BORDERS
+------------------------------------------------------- */
+.border { border-width: 1px; }
+.border-b { border-bottom-width: 1px; }
+.border-gray-100 { border-color: #f3f4f6; }
+.border-gray-200 { border-color: #e5e7eb; }
+.border-blue-700 { border-color: #1d4ed8; }
+.border-white\/10 { border-color: rgba(255,255,255,0.1); }
+.border-white\/20 { border-color: rgba(255,255,255,0.2); }
+.border-green-200 { border-color: #bbf7d0; }
+
+/* -------------------------------------------------------
+   ROUNDED CORNERS
+------------------------------------------------------- */
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-full { border-radius: 9999px; }
+
+/* -------------------------------------------------------
+   SHADOWS
+------------------------------------------------------- */
+.shadow-sm { box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+.shadow-lg { box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+.shadow-xl { box-shadow: 0 20px 25px rgba(0,0,0,0.15); }
+
+/* -------------------------------------------------------
+   BLUR / BACKDROP
+------------------------------------------------------- */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
 }
 
 /* -------------------------------------------------------
-   CARD / PANEL
+   POSITIONING
 ------------------------------------------------------- */
+.sticky { position: sticky; }
+.top-0 { top: 0; }
+.z-40 { z-index: 40; }
 
-.card {
-  background: white;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+/* -------------------------------------------------------
+   ANIMATIONS
+------------------------------------------------------- */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes pulse {
+  50% { opacity: 0.5; }
+}
+.animate-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
 }
 
 /* -------------------------------------------------------
-   TEXT HELPERS
+   TRANSITIONS
 ------------------------------------------------------- */
-
-.text-center {
-  text-align: center;
-}
-
-.text-lg {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.text-sm {
-  font-size: 14px;
-  opacity: 0.8;
-}
+.transition-all { transition: all 0.2s ease; }
+.transition-colors { transition: color 0.2s ease, background-color 0.2s ease; }
 
 /* -------------------------------------------------------
-   RN-LIKE SAFE AREA
+   WIDTH / HEIGHT
 ------------------------------------------------------- */
+.w-full { width: 100%; }
+.w-6 { width: 1.5rem; }
+.w-5 { width: 1.25rem; }
+.w-4 { width: 1rem; }
+.w-3 { width: 0.75rem; }
+.h-6 { height: 1.5rem; }
+.h-5 { height: 1.25rem; }
+.h-4 { height: 1rem; }
+.h-3 { height: 0.75rem; }
+.h-10 { height: 2.5rem; }
 
-.safe-area {
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-}
+/* -------------------------------------------------------
+   OPACITY
+------------------------------------------------------- */
+.opacity-75 { opacity: 0.75; }
+.opacity-90 { opacity: 0.9; }
+
+/* -------------------------------------------------------
+   CURSOR
+------------------------------------------------------- */
+.cursor-pointer { cursor: pointer; }
