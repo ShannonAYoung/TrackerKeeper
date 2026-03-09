@@ -23,23 +23,10 @@
 }
 </script>
 <link rel="stylesheet" href="/index.css">
-  <!-- Load Babel Standalone to transpile TS in the browser -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
   <body>
-<!-- Use type="text/babel" for in-browser TS -->
-  <script type="text/babel" data-presets="typescript">
-    interface User {
-      name: string;
-    }
-
-    const user: User = {
-      name: 'Bob',
-    };
-
-    const root = document.getElementById("root");
-    if (root) {
-      root.innerHTML = `Hello, ${user.name}!`;
-    }
-  </script></body>
+Test
+    <div id="root"></div>
+  <script type="application/typescript" src="/index.tsx"></script>
+</body>
 </html>
