@@ -15,8 +15,8 @@ import { getProtocolInstructions } from "./utils/protocol";
 
 
 const App = () => {
-
-  const { deviceState, setDeviceState, handleDisconnect, manualRefresh, testDrift } = useDeviceState();
+alert("zpptsx");
+const { deviceState, setDeviceState, handleDisconnect, manualRefresh, testDrift } = useDeviceState();
   const { settings, setSettings } = useSettings();
 
   const [isPairingModalOpen, setIsPairingModalOpen] = useState(false);
