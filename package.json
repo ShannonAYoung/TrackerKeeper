@@ -15,7 +15,7 @@
     "test": "jest",
     "lint": "eslint .",
 
-   "build:android": "react-native bundle --platform android --dev false --entry-file index.tsx --bundle-output      src/main/assets/index.android.bundle --assets-dest src/main/res/"
+   "build": "react-native bundle --platform android --dev false --entry-file index.tsx --bundle-output      src/main/assets/index.android.bundle --assets-dest src/main/res/"
   },
   "dependencies": {
     "react": "18.2.0",
