@@ -267,5 +267,4 @@ const handlePairingComplete = (platform: Platform, deviceName: string) => {
 
 );
 
-export default App;
 
