@@ -7,6 +7,7 @@
     <title>Tracker Keeper</title>
     <meta name="description" content="Phone and Watch Range Tracker" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="dist/my-first-webpack.bundle.js"></script>
     <style>
       body {
         background-color: #4169E1;
@@ -30,7 +31,8 @@
 
 
 
-<script> import React, { useState } from "react";
+<script type="module"> 
+import React, { useState } from "react";
 import "./src/styles/index.css";
 
 import PairingModal from "./src/components/PairingModal";
