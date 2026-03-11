@@ -7,7 +7,7 @@
     <title>Tracker Keeper</title>
     <meta name="description" content="Phone and Watch Range Tracker" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="dist/my-first-webpack.bundle.js"></script>
+
     <style>
       body {
         background-color: #4169E1;
@@ -26,6 +26,22 @@
 <link rel="stylesheet" href="./src/styles/index.css">
 </head>
   <body>
+
+
+<div id="root2"></div>
+
+<script type="module">
+  import React from "react";
+  import ReactDOM from "react-dom/client";
+
+  function InlineApp() {
+    return React.createElement("div", null, "Hello from inline React!");
+  }
+
+  ReactDOM.createRoot(document.getElementById("root2")).render(
+    React.createElement(InlineApp)
+  );
+</script>
 
 
 
