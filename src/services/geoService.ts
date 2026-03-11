@@ -1,4 +1,4 @@
-import { Coordinates, Platform } from '../types/types';
+import { Coordinates, Platform } from '../types/enums';
 
 const FALLBACK_COORDS: Coordinates = {
     latitude: 40.7128, // New York City (Default Fallback)

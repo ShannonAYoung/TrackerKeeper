@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Smartphone, Bluetooth, Check, Loader2, X, ChevronRight } from 'lucide-react';
-import { Platform } from '../types/types';
+import { Platform } from '../types/enums';
 
 interface PairingModalProps {
   isOpen: boolean;

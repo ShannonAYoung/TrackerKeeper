@@ -1,6 +1,13 @@
 import React from 'react';
 import { Settings, Save } from 'lucide-react';
-import { DeviceSettings } from '../types/types';
+import { DeviceSettings } from '../types/enums';
+
+
+export interface SettingsPanelProps {
+  settings: DeviceSettings;
+  onSave: (settings: DeviceSettings) => void;
+}
+
 
 interface DeviceSettings {
   maxRangeMeters: number;

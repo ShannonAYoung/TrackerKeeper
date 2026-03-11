@@ -13,8 +13,7 @@ import { useDeviceState } from "./hooks/useDeviceState";
 import { useSettings } from "./hooks/useSettings";
 import { getProtocolInstructions } from "./utils/protocol";
 
-
-const App = () => {
+export default function App() {
 
 const { deviceState, setDeviceState, handleDisconnect, manualRefresh, testDrift } = useDeviceState();
   const { settings, setSettings } = useSettings();
@@ -265,11 +264,7 @@ const handlePairingComplete = (platform: Platform, deviceName: string) => {
   );
 }
 
-// Create the React 18 root and render the app
-ReactDOM.createRoot(rootElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
 );
 
 export default App;

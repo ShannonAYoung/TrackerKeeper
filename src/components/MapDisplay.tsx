@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Coordinates } from '../types/types';
+import { Coordinates } from '../types/enums';
 import { MapPin, Map } from 'lucide-react';
 
 interface MapDisplayProps {

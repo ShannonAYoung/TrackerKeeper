@@ -1,4 +1,4 @@
-import { DeviceSettings } from './types/types';
+import { DeviceSettings } from '../types/enums';
 
 export const DEFAULT_SETTINGS: DeviceSettings = {
   maxRangeMeters: 50, // Default 50 meters
