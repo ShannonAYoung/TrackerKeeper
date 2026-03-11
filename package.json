@@ -17,8 +17,8 @@
     "test": "jest",
     "lint": "eslint .",
 
-    "start:ts": "ts-node src/server.ts",
-    "build:ts": "tsc -p tsconfig.json",
+    "start:tsx": "ts-node src/server.ts",
+    "build:tsx": "tsc -p tsconfig.json",
 
     "build": "react-native bundle --platform android --dev false --entry-file index.tsx --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/"
   },
