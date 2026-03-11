@@ -15,7 +15,7 @@ import { getProtocolInstructions } from "./utils/protocol";
 
 
 const App = () => {
-alert("zpptsx");
+
 const { deviceState, setDeviceState, handleDisconnect, manualRefresh, testDrift } = useDeviceState();
   const { settings, setSettings } = useSettings();
 
