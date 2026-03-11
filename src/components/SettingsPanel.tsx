@@ -1,19 +1,26 @@
 import React from 'react';
 import { Settings, Save } from 'lucide-react';
-import { DeviceSettings } from '../types';
+import { DeviceSettings } from '../types/types';
 
-interface SettingsPanelProps {
-  settings: DeviceSettings;
-  onSave: (newSettings: DeviceSettings) => void;
+interface DeviceSettings {
+  maxRangeMeters: number;
+  updateIntervalMinutes: number;
+  mapApiKey: string;
 }
+
 
 const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onSave }) => {
   const [localSettings, setLocalSettings] = React.useState<DeviceSettings>(settings);
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const handleChange = (key: keyof DeviceSettings, value: string | number) => {
-    setLocalSettings(prev => ({ ...prev, [key]: value }));
-  };
+const handleChange = (key: keyof DeviceSettings, value: string | number) => {
+  setLocalSettings((prev: DeviceSettings) => ({
+    ...prev,
+    [key]: value
+  }));
+};
+
+
 
   const handleSave = () => {
     onSave(localSettings);

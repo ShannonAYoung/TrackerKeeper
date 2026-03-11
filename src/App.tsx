@@ -22,15 +22,17 @@ const { deviceState, setDeviceState, handleDisconnect, manualRefresh, testDrift 
   const [isPairingModalOpen, setIsPairingModalOpen] = useState(false);
 
   const handlePairingRequest = () => setIsPairingModalOpen(true);
-  const handlePairingComplete = (platform: Platform, name: string) => {
-    setDeviceState(prev => ({
-      ...prev,
-      platform,
-      deviceName: name,
-      status: ConnectionStatus.SEARCHING
-    }));
-    setIsPairingModalOpen(false);
-  };
+const handlePairingComplete = (platform: Platform, deviceName: string) => {
+  setDeviceState(prev => ({
+    ...prev,
+    platform,
+    deviceName,
+    status: ConnectionStatus.SEARCHING
+  }));
+  setIsPairingModalOpen(false);
+};
+
+
 
   return (
     <div className="min-h-screen bg-[#4169E1] text-gray-900 font-sans pb-10">
@@ -263,6 +265,12 @@ const { deviceState, setDeviceState, handleDisconnect, manualRefresh, testDrift 
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App/>);
+// Create the React 18 root and render the app
+ReactDOM.createRoot(rootElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
 export default App;
+
