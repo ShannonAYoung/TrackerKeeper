@@ -19,7 +19,13 @@ export default defineConfig(({ mode }) => {
       ]
     },
 
-    plugins: [react()],
+     plugins: [react()],
+     build: {
+     manifest: true,
+     outDir: "dist",
+    },
+
+
 
     define: {
       'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
