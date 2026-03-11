@@ -9,13 +9,6 @@ export interface SettingsPanelProps {
 }
 
 
-interface DeviceSettings {
-  maxRangeMeters: number;
-  updateIntervalMinutes: number;
-  mapApiKey: string;
-}
-
-
 const SettingsPanel: React.FC<SettingsPanelProps> = ({ settings, onSave }) => {
   const [localSettings, setLocalSettings] = React.useState<DeviceSettings>(settings);
   const [isOpen, setIsOpen] = React.useState(false);

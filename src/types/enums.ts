@@ -5,9 +5,9 @@ export enum Platform {
 }
 
 export enum ConnectionStatus {
-  DISCONNECTED = "DISCONNECTED",
-  SEARCHING = "SEARCHING",
-  CONNECTED = "CONNECTED"
+  DISCONNECTED = 'Disconnected',
+  SEARCHING = 'Searching...',
+  CONNECTED = 'Connected'
 }
 
 export interface Coordinates {
@@ -17,17 +17,8 @@ export interface Coordinates {
   accuracy?: number;
 }
 
-export enum Platform {
-  IOS = 'iOS',
-  ANDROID = 'Android',
-  UNKNOWN = 'Unknown'
-}
 
-export enum ConnectionStatus {
-  DISCONNECTED = 'Disconnected',
-  SEARCHING = 'Searching...',
-  CONNECTED = 'Connected'
-}
+
 
 export interface DeviceSettings {
   maxRangeMeters: number;
