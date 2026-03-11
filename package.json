@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "main": "index.tsx",
+
   "scripts": {
     "start": "npx react-native start",
     "android": "npx react-native run-android",
@@ -17,9 +18,11 @@
     "lint": "eslint .",
 
     "start:ts": "ts-node src/server.ts",
+    "build:ts": "tsc -p tsconfig.json",
 
     "build": "react-native bundle --platform android --dev false --entry-file index.tsx --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/"
   },
+
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -32,6 +35,7 @@
     "typescript": "^5.3.0",
     "ts-node": "^10.9.2"
   },
+
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/preset-env": "^7.23.0",
@@ -55,9 +59,11 @@
     "@vitejs/plugin-react": "^5.1.3",
     "vite": "^7.3.1"
   },
+
   "jest": {
     "preset": "react-native"
   },
+
   "browserslist": {
     "production": [
       ">0.2%",
