@@ -31,19 +31,19 @@
 
 
 <script> import React, { useState } from "react";
-import "./styles/index.css";
+import "./src/styles/index.css";
 
-import PairingModal from "./components/PairingModal";
-import AlertModal from "./components/AlertModal";
-import MapDisplay from "./components/MapDisplay";
-import SettingsPanel from "./components/SettingsPanel";
+import PairingModal from "./src/components/PairingModal";
+import AlertModal from "./src/components/AlertModal";
+import MapDisplay from "./src/components/MapDisplay";
+import SettingsPanel from "./src/components/SettingsPanel";
 
 import { Cpu, Smartphone, Bluetooth, Watch, RefreshCw, ShieldCheck } from "lucide-react";
 
-import { Platform, ConnectionStatus } from "./types/enums";
-import { useDeviceState } from "./hooks/useDeviceState";
-import { useSettings } from "./hooks/useSettings";
-import { getProtocolInstructions } from "./utils/protocol";
+import { Platform, ConnectionStatus } from "./src/types/enums";
+import { useDeviceState } from "./src/hooks/useDeviceState";
+import { useSettings } from "./src/hooks/useSettings";
+import { getProtocolInstructions } from "./src/utils/protocol";
 
 
 const App = () => {
