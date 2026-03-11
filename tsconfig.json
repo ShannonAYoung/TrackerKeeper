@@ -1,8 +1,9 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "jsx": "react-native",
+    "jsx": "react-jsx",
     "strict": true,
     "allowJs": false,
     "moduleResolution": "node",
@@ -11,8 +12,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "types": ["jest"]
+    "types": ["node"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "src", "vite.config.ts"],
   "exclude": ["node_modules"]
 }
