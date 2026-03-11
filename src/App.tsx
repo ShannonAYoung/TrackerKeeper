@@ -265,6 +265,3 @@ const handlePairingComplete = (platform: Platform, deviceName: string) => {
 }
 
 
-);
-
-
