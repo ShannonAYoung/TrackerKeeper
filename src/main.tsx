@@ -4,7 +4,7 @@ import App from "./App";
 import "./styles/index.css";
 
 const root = document.getElementById("root");
-
+alert("in indextsx");
 if (!root) {
   throw new Error("Root element #root not found");
 }
