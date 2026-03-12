@@ -9,16 +9,16 @@
     "android": "npx react-native run-android",
     "ios": "npx react-native run-ios",
 
-    "build:ts": "npx tsc -p tsconfig.json",
-    "start:ts": "npx ts-node src/server.ts",
+    "build:ts": "npx tsc -p ./tsconfig.json",
+    "start:ts": "npx ts-node ./src/server.ts",
 
 
     "dev:web": "vite",
     "build:web": "vite build",
     "preview:web": "vite preview",
 
-    "start:server": "npx ts-node src/server.ts",
-    "build:server": "tsc -p tsconfig.json",
+    "start:server": "npx ts-node ./src/server.ts",
+    "build:server": "tsc -p ./tsconfig.json",
 
     "test": "jest",
     "lint": "eslint .",
