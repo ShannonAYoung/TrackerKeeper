@@ -9,15 +9,15 @@
     "build:ts": "npx tsc -p ./tsconfig.json",
     "start:ts": "npx ts-node ./src/server.ts",
 
-"start": "npx ts-node src/server.ts",
-"build": "npx tsc -p tsconfig.json",
+"start": "npx ts-node ./src/server.ts",
+"build": "npx tsc -p ./tsconfig.json",
 
     "dev:web": "vite",
     "build:web": "vite build",
     "preview:web": "vite preview",
 
     "start:server": "npx ts-node ./src/server.ts",
-    "build:server": "tsc -p ./tsconfig.json",
+    "build:server": "npx tsc -p ./tsconfig.json",
 
     "test": "jest",
     "lint": "eslint ."
