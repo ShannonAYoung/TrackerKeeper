@@ -10,6 +10,10 @@
     "android": "npx react-native run-android",
     "ios": "npx react-native run-ios",
 
+    "build:ts": "npx tsc -p tsconfig.json",
+    "start:ts": "npx ts-node src/server.ts",
+
+
     // Web (Vite)
     "dev:web": "vite",
     "build:web": "vite build",
