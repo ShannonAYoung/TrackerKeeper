@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "main": "index.tsx",
+  "main": "./src/main.tsx",
 
   "scripts": {
     "start": "npx react-native start",
@@ -20,7 +20,7 @@
     "start:tsx": "ts-node src/server.ts",
     "build:tsx": "tsc -p tsconfig.json",
 
-    "build": "react-native bundle --platform android --dev false --entry-file index.tsx --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/"
+    "build": "react-native bundle --platform android --dev false --entry-file ./src/main.tsx --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/"
   },
 
   "dependencies": {
