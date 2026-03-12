@@ -12,8 +12,8 @@
     "build:ts": "npx tsc -p ./tsconfig.json",
     "start:ts": "npx ts-node ./src/server.ts",
 
-"start:tsx": "npx ts-node src/server.ts",
-"build:tsx": "npx tsc -p tsconfig.json",
+"start": "npx ts-node src/server.ts",
+"build": "npx tsc -p tsconfig.json",
 
     "dev:web": "vite",
     "build:web": "vite build",
@@ -25,7 +25,6 @@
     "test": "jest",
     "lint": "eslint .",
 
-    "build": "react-native bundle --platform android --dev false --entry-file src/main.tsx --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/"
   },
 
   "dependencies": {
