@@ -12,6 +12,8 @@
     "build:ts": "npx tsc -p ./tsconfig.json",
     "start:ts": "npx ts-node ./src/server.ts",
 
+"start:tsx": "npx ts-node src/server.ts",
+"build:tsx": "npx tsc -p tsconfig.json",
 
     "dev:web": "vite",
     "build:web": "vite build",
