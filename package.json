@@ -20,7 +20,7 @@
     "build:server": "tsc -p ./tsconfig.json",
 
     "test": "jest",
-    "lint": "eslint .",
+    "lint": "eslint ."
 
   },
 
